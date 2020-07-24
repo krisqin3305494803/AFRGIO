@@ -1,0 +1,26 @@
+{
+	"pages": [
+		{
+			"path": "pages/commonproblem/commonproblem",
+			"style":{
+				"navigationBarTextStyle":"black"
+			}
+		},		
+		{
+			"path":"pages/commonproblem/timeproblem"
+		},
+		{
+			"path":"pages/commonproblem/goodstime",
+			"style":{
+				"navigationBarTitleText":"各商品发货时间"
+			}
+		}
+		
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "常见问题",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	}
+}
