@@ -4,7 +4,7 @@
 			常见问题
 	</view>	
 		<uni-list>
-		    <uni-list-item @click="goDetail()" title="标题文字">1</uni-list-item>
+				<uni-list-item @click="goDetail()" v-for="(item,title) in problemList" ></uni-list-item>
 		</uni-list>
 	 </view>
 
@@ -15,22 +15,38 @@
 	import uniListItem from "@/components/uni-list-item/uni-list-item.vue"
 	export default {
 	    components: {uniList,uniListItem},
-		
-		data() {
-			return {
-				
+		data()
+		{
+			return{
+				problemList:[],
 			}
 		},
+		onLoad() {
+			this.problemList()
+		},
+		}
 		
 		methods:{
 			goDetail ()
 			{
+				uni.request({
+					url: '118.24.96.51:8080//problem/asd/asd', 
+					data:{
+						text:'uni.request'
+					},
+					success: (res) => {
+					console.log(res)
+					this.problemList=res.data
+					console.log(this.problemList)
+				}
+				});
+							
+							
 				uni.navigateTo({
-					url:'goodstime?id=81'
+					url:'goodstime?id=4'
 				})
 			}
 		}
-	}
 </script>
 
 <style>
